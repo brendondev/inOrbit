@@ -41,7 +41,8 @@ Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker e Zod pa
 
 ## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+
+https://github.com/user-attachments/assets/5068cf16-52a0-459d-b220-2e4ef9e2c5c1
 
 
 ## Documentação da API
