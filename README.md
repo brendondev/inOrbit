@@ -93,5 +93,5 @@ https://github.com/user-attachments/assets/5068cf16-52a0-459d-b220-2e4ef9e2c5c1
 ## Autores
 
 - [@brendondev](https://www.github.com/brendondev)
-- [@diego3d](https://github.com/diego3g)
+- [@diego3g](https://github.com/diego3g)
 
