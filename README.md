@@ -1,20 +1,16 @@
-
 # inOrbit
 
-Este é um aplicativo simples para organização de metas. Ele permite que os usuários criem, gerenciem e acompanhem metas semanais. O foco do projeto é proporcionar uma interface clara e intuitiva para o gerenciamento de metas, além de apresentar um progresso semanal de forma visual.
+This is a simple goal management app. It allows users to create, manage, and track weekly goals. The focus of the project is to provide a clear and intuitive interface for goal management, as well as to present weekly progress in a visual format.
 
-## Funcionalidades
+## Features
 
-- **Cadastro de metas**: Os usuários podem cadastrar novas metas que precisam ser concluídas.
-- **Visualização de metas pendentes**: Exibe todas as metas que ainda não foram concluídas.
-- **Progresso semanal**: Visualização gráfica do progresso da semana, incluindo metas concluídas e porcentagem de conclusão.
-- **Histórico de metas concluídas**: Exibe metas concluídas com data e hora específicas.
-- **Responsive Design**: O aplicativo foi projetado para ser responsivo, se adaptando a diferentes tamanhos de tela.
+- **Goal Tracker**: Users can register new goals that need to be completed.
+- **Pending Goal View**: Displays all goals that have not yet been completed.
+- **Weekly Progress**: Graphical view of weekly progress, including completed goals and percentage of completion.
+- **Completed Goal History**: Displays completed goals with a specific date and time.
+- **Responsive Design**: The app is designed to be responsive, adapting to different screen sizes.
 
-
-
-
-## Tecnologias Usadas
+## Technologies Used
 
 - **Drizzle ORM**
 - **Postgres**
@@ -28,70 +24,61 @@ Este é um aplicativo simples para organização de metas. Ele permite que os us
 - **Hook Form**
 - **Tanstack**
 
-Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker e Zod para validação de dados.
+Fastify as a framework, DrizzleORM + PostgreSQL integration, Docker and Zod for data validation.
 
-
-
-## Stack utilizada
+## Stack used
 
 **Front-end:** ReactJS, TailwindCSS, Vite
 
 **Back-end:** Typescript, NodeJS, TanStack Query
 
-
-## Demonstração
-
+## Demo
 
 https://github.com/user-attachments/assets/5068cf16-52a0-459d-b220-2e4ef9e2c5c1
 
+## API documentation
 
-## Documentação da API
-
-#### Cria uma meta
-
-```http
-  POST /goals
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `title`      | `string` | **Obrigatório**. O título da meta |
-| `desiredWeeklyFrequency`      | `number` | **Obrigatório**. A frequência por semana. |
-
-
-
-#### Adiciona uma finalização de meta
+#### Create a goal
 
 ```http
-  POST /create-completion
+POST /goals
 ```
 
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `goalId` | `string` | **Obrigatório**. O ID da meta a ser completada |
+| Parameter | Type | Description |
+| :--------- | :--------- | :-------------------------------------------- |
+| `title` | `string` | **Required**. The title of the goal |
+| `desiredWeeklyFrequency` | `number` | **Required**. The frequency per week. |
 
-
-#### Listagem de pendências
+#### Add a goal completion
 
 ```http
-  GET /pending-goals
+POST /create-completion
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `pendingGoals`      | `array` |Lista as metas pendentes |
+| Parameter | Type | Description |
+| :---------- | :--------- | :----------------------------------- |
+| `goalId` | `string` | **Required**. The ID of the goal to be completed |
 
-#### Listagem geral
+#### Pending list
 
 ```http
-  GET /get-week-summary
+GET /pending-goals
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `summary`      | `array` |Lista todas as metas |
-## Autores
+| Parameter | Type | Description |
+| :--------- | :--------- | :-------------------------------------------- |
+| `pendingGoals` | `array` |Lists pending goals |
+
+#### General list
+
+```http
+GET /get-week-summary
+```
+
+| Parameter | Type | Description |
+| :--------- | :--------- | :--------------------------- |
+| `summary` | `array` |List all goals |
+## Authors
 
 - [@brendondev](https://www.github.com/brendondev)
 - [@diego3g](https://github.com/diego3g)
-
