@@ -1,5 +1,5 @@
 # inOrbit 💫
-
+ 
 This is a simple goal management app. It allows users to create, manage, and track weekly goals. The focus of the project is to provide a clear and intuitive interface for goal management, as well as to present weekly progress in a visual format.
 
 ## Features
